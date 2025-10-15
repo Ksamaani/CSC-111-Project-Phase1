@@ -26,6 +26,7 @@ public class LibrarySimulator {
         //Choice Variables
         int mainMenuChoiceNum = 0;
         int subMenuChoiceNum = 0;
+
         //main menu
         do{
             System.out.println("---- Welcome To The library ----");
