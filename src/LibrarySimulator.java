@@ -4,7 +4,8 @@
 import java.util.Scanner;
 public class LibrarySimulator {
     public static void main (String[] args){
-        Scanner Input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+
         //user Variables
         String uesr1name = "Ahmad";
         int user1Id = 101;
@@ -22,6 +23,22 @@ public class LibrarySimulator {
         double totalRevenue = 0.0;
         int totalBorrowedOperations = 0;
         int totalReturnedOperations = 0;
+        //Choice Variables
+        int mainMenuChoiceNum = 0;
+        int subMenuChoiceNum = 0;
+        //main menu
+        do{
+            System.out.println("---- Welcome To The library ----");
+            System.out.printf("\t 1. %s  %d %n",uesr1name,user1Id);
+            System.out.printf("\t 2. %s  %d %n",uesr2name,user2Id);
+            System.out.printf("\t 3. %s  %d %n",uesr3name,user3Id);
+            System.out.printf("\t 4. Administrator %n");
+            System.out.printf("\t 5. Exit %n %n");
+            System.out.print("Enter Your Choice :");
+            mainMenuChoiceNum = input.nextInt();
+        }while (mainMenuChoiceNum != 5);
+        System.out.println("Thank You For Using The Library Simulator. ");
+
 
     }
 }
