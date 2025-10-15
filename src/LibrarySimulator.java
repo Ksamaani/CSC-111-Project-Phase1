@@ -23,6 +23,5 @@ public class LibrarySimulator {
         int totalBorrowedOperations = 0;
         int totalReturnedOperations = 0;
 
-
     }
 }
