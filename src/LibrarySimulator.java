@@ -37,6 +37,37 @@ public class LibrarySimulator {
             System.out.printf("\t 5. Exit %n %n");
             System.out.print("Enter Your Choice :");
             mainMenuChoiceNum = input.nextInt();
+
+            switch(mainMenuChoiceNum){
+                case 1 -> {
+                    do {
+                        //Add user menu
+                        System.out.println("welcome user1");
+                        subMenuChoiceNum = input.nextInt();
+                    } while (subMenuChoiceNum != 5);
+                }
+                case 2 ->{
+                    do {
+                        //Add user menu
+                        System.out.println("welcome user2");
+                        subMenuChoiceNum = input.nextInt();
+                    } while (subMenuChoiceNum != 5);
+                }
+                case 3 -> {
+                    do {
+                        //Add user menu
+                        System.out.println("welcome user3");
+                        subMenuChoiceNum = input.nextInt();
+                    } while (subMenuChoiceNum != 5);
+                }
+                case 4 -> {do {
+                    //Add Admin menu
+                    System.out.println("welcome Admin");
+                    subMenuChoiceNum = input.nextInt();
+                    }while (subMenuChoiceNum != 4);
+                }
+
+            }
         }while (mainMenuChoiceNum != 5);
         System.out.println("Thank You For Using The Library Simulator. ");
 
