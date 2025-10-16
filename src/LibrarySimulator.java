@@ -48,7 +48,7 @@ public class LibrarySimulator {
                     do {
                         //Add user1 menu
 
-                        System.out.printf("%n-----------------------------%n \t \t Welcome %s %n-----------------------------%n",uesrName1);
+                        System.out.printf("%n-----------------------------%n \t    Welcome %s %n-----------------------------%n",uesrName1);
                         System.out.println("1.Borrow a Book");
                         System.out.println("2.View Borrowed Books");
                         System.out.println("3.Return Book");
@@ -90,7 +90,7 @@ public class LibrarySimulator {
                                 System.out.printf("Number of books returned %d%n",SessionReturnedBooks);
                                 System.out.printf("Total fees incurred during the session: %.2f $",SessionFees);
                             }
-                            default -> System.out.println("Invalid Choice Please Try Again !");
+                            default -> System.out.printf("%nInvalid Choice Please Try Again !");
                         }
                     } while (subMenuChoiceNum != 5);
                 }
@@ -103,7 +103,7 @@ public class LibrarySimulator {
                     do {
                         //Add user2 menu
 
-                        System.out.printf("%n-----------------------------%n \t \t Welcome %s %n-----------------------------%n",uesrName2);
+                        System.out.printf("%n-----------------------------%n \t   Welcome %s %n-----------------------------%n",uesrName2);
                         System.out.println("1.Borrow a Book");
                         System.out.println("2.View Borrowed Books");
                         System.out.println("3.Return Book");
@@ -145,7 +145,7 @@ public class LibrarySimulator {
                                 System.out.printf("Number of books returned %d%n",SessionReturnedBooks);
                                 System.out.printf("Total fees incurred during the session: %.2f $",SessionFees);
                             }
-                            default -> System.out.println("Invalid Choice Please Try Again !");
+                            default -> System.out.printf("%nInvalid Choice Please Try Again !");
                         }
                     } while (subMenuChoiceNum != 5);
                 }
@@ -158,7 +158,7 @@ public class LibrarySimulator {
                     do {
                         //Add user2 menu
 
-                        System.out.printf("%n-----------------------------%n \t \t Welcome %s %n-----------------------------%n",uesrName3);
+                        System.out.printf("%n-----------------------------%n \t    Welcome %s %n-----------------------------%n",uesrName3);
                         System.out.println("1.Borrow a Book");
                         System.out.println("2.View Borrowed Books");
                         System.out.println("3.Return Book");
@@ -200,7 +200,7 @@ public class LibrarySimulator {
                                 System.out.printf("Number of books returned %d%n",SessionReturnedBooks);
                                 System.out.printf("Total fees incurred during the session: %.2f $",SessionFees);
                             }
-                            default -> System.out.println("Invalid Choice Please Try Again !");
+                            default -> System.out.printf("%nInvalid Choice Please Try Again !");
                         }
                     } while (subMenuChoiceNum != 5);
                 }
