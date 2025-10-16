@@ -7,7 +7,7 @@ public class LibrarySimulator {
         Scanner input = new Scanner(System.in);
 
         //user Variables
-        String uesr1name = "Ahmad";
+        String uesrName1 = "Ahmad";
         int user1Id = 101;
         int user1BorrowedBook = 0;
         String uesr2name = "Mohamad";
@@ -31,7 +31,7 @@ public class LibrarySimulator {
         //main menu
         do{
             System.out.println("---- Welcome To The library ----");
-            System.out.printf("\t 1. %s  %d %n",uesr1name,user1Id);
+            System.out.printf("\t 1. %s  %d %n",uesrName1,user1Id);
             System.out.printf("\t 2. %s  %d %n",uesr2name,user2Id);
             System.out.printf("\t 3. %s  %d %n",uesr3name,user3Id);
             System.out.printf("\t 4. Administrator %n");
@@ -44,8 +44,8 @@ public class LibrarySimulator {
                     do {
                         //Add user menu
 
-                        System.out.printf("%n-----------------------------%n \t \t Welcome %s %n-----------------------------%n",uesr1name);
-                        System.out.println("1.Barrow a Book");
+                        System.out.printf("%n-----------------------------%n \t \t Welcome %s %n-----------------------------%n",uesrName1);
+                        System.out.println("1.Borrow a Book");
                         System.out.println("2.View Borrowed Books");
                         System.out.println("3.Return Book");
                         System.out.println("4.View Session Summary");
@@ -54,11 +54,12 @@ public class LibrarySimulator {
                         subMenuChoiceNum = input.nextInt();
                         switch(subMenuChoiceNum){
                             case 1 -> {
-                                if (user1BorrowedBook <= 5) {
-                                    user1BorrowedBook++;
-                                    SessionBorrowedBooks++;
-                                    SessionFees = +0.5;
-                                    totalRevenue = +0.5;
+                                if (user1BorrowedBook < 5) {
+                                    user1BorrowedBook ++;
+                                    SessionBorrowedBooks ++;
+                                    SessionFees += 0.5;
+                                    totalRevenue += 0.5;
+                                    totalBorrowedOperations ++;
                                     System.out.printf("You have borrowed Book!");
                                 }
                                 else {
@@ -66,12 +67,13 @@ public class LibrarySimulator {
                                 }
                             }
                             case 2 ->{
-                                System.out.printf("%nYou borrowed %s books%n",user1BorrowedBook);
+                                System.out.printf("%nYou borrowed %d books%n",user1BorrowedBook);
                             }
                             case 3 ->{
                                 if (user1BorrowedBook >= 1) {
                                     user1BorrowedBook--;
                                     SessionReturnedBooks++;
+                                    totalReturnedOperations ++;
                                     System.out.printf("%nYou have Returned Book!");
                                 }
                                 else {
@@ -82,13 +84,14 @@ public class LibrarySimulator {
                                 System.out.printf("%nThe Session Summary Is :%n");
                                 System.out.printf("Number of books borrowed %d%n",SessionBorrowedBooks);
                                 System.out.printf("Number of books returned %d%n",SessionReturnedBooks);
-                                System.out.printf("Total fees incurred during the session %.2f $",SessionFees);
+                                System.out.printf("Total fees incurred during the session: %.2f $",SessionFees);
                             }
                             case 5 ->{
                                 SessionBorrowedBooks = 0;
                                 SessionReturnedBooks = 0;
                                 SessionFees = 0.0;
                             }
+                            default -> System.out.println("Invalid Choice Please Try Again !");
                         }
                     } while (subMenuChoiceNum != 5);
                 }
@@ -113,6 +116,7 @@ public class LibrarySimulator {
                     subMenuChoiceNum = input.nextInt();
                     }while (subMenuChoiceNum != 4);
                 }
+                default -> System.out.println("Invalid Choice Please Try Again !");
 
             }
         }while (mainMenuChoiceNum != 5);
