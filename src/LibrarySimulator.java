@@ -219,7 +219,6 @@ public class LibrarySimulator {
                     subMenuChoiceNum = input.nextInt();
                     }while (subMenuChoiceNum != 4);
                 }
-
             }
         }while (mainMenuChoiceNum != 5);
         System.out.println("Thank You For Using The Library Simulator. ");
