@@ -1,6 +1,7 @@
 //This Project Is Done By:
 // Khalid ALSamaani     446100885
-// Nasser AlOthman      446103585
+// Nasser ALOthman      446103585
+// Abdullah ALFrayan    446105689
 
 import java.util.Scanner;
 public class LibrarySimulator {
