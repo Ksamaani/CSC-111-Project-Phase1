@@ -30,7 +30,7 @@ public class LibrarySimulator {
         int subMenuChoiceNum = 0;
         // admin username&Pass
         final String AdminUsername = "admin";
-        final String AdminPassword = "123"  ;
+        final String AdminPassword = "1234"  ;
 
         //main menu
         do{
@@ -167,7 +167,6 @@ public class LibrarySimulator {
 
                     do {
                         //Add user2 menu
-
                         System.out.printf("%n-----------------------------%n \t    Welcome %s %n-----------------------------%n",uesrName3);
                         System.out.println("1.Borrow a Book");
                         System.out.println("2.View Borrowed Books");
