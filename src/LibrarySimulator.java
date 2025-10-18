@@ -28,6 +28,9 @@ public class LibrarySimulator {
         //Choice Variables
         int mainMenuChoiceNum = 0;
         int subMenuChoiceNum = 0;
+        // admin username&Pass
+        final String AdminUsername = "admin";
+        final String AdminPassword = "123"  ;
 
         //main menu
         do{
@@ -214,11 +217,50 @@ public class LibrarySimulator {
                         }
                     } while (subMenuChoiceNum != 5);
                 }
-                case 4 -> {do {
-                    //Add Admin menu
-                    System.out.println("welcome Admin");
-                    subMenuChoiceNum = input.nextInt();
-                    }while (subMenuChoiceNum != 4);
+                case 4 -> {
+                        //Asking for Username and Password
+                        System.out.println("Enter Username and Password");
+                        System.out.print("Username -> ");
+                        String UserInputUsername = input.next();
+                        System.out.printf("Password -> ");
+                        String UserInputPassword = input.next();
+                        if (AdminUsername.equals(UserInputUsername) && AdminPassword.equals(UserInputPassword))
+                        {
+                            do {
+                            //Add Admin menu
+                            System.out.printf("%n-----------------------------%n \t    Welcome Admin %n-----------------------------%n");
+                            System.out.println("1.View Total Revenue");
+                            System.out.println("2.Most Frequent Operation");
+                            System.out.printf("3.Exit to Main Menu %n%n");
+                            System.out.print("Enter your choice: ");
+                            subMenuChoiceNum = input.nextInt();
+
+                            switch(subMenuChoiceNum) {
+                                case 1 -> {
+                                    System.out.printf("The total revenue is: %.2f $", totalRevenue);
+                                }
+                                case 2 -> {
+                                    if (totalBorrowedOperations > totalReturnedOperations) {
+                                        System.out.printf("Total Borrowed books %d is greater than Total Returned books %d ", totalBorrowedOperations, totalReturnedOperations);
+                                    }
+                                    else if (totalReturnedOperations > totalBorrowedOperations) {
+                                        System.out.printf("Total Returned books %d is greater than Total Borrowed books %d ", totalReturnedOperations ,totalBorrowedOperations);
+                                    }
+                                    else {
+                                        System.out.printf("Total Borrowed books %d is equal to the Total Returned books %d ", totalBorrowedOperations, totalReturnedOperations);
+                                    }
+                                }
+                                case 3 -> {
+                                    System.out.println("Returning to main menu...\n");
+                                }
+                                default -> {
+                                    System.out.println("Invalid Choice Please Try Again !");
+                                }
+                            }
+                        }while (subMenuChoiceNum != 3);
+                        }
+                        else {System.out.println("Either Username or Password is incorrect !");}
+
                 }
             }
         }while (mainMenuChoiceNum != 5);
